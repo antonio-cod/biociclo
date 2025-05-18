@@ -1,5 +1,4 @@
 import { FiLock, FiUser, FiUserCheck } from 'react-icons/fi'
-import { BiBuildings } from "react-icons/bi";
 
 import { useNavigate} from "react-router-dom";
 
@@ -23,16 +22,16 @@ export function SignUp() {
   }
 
   const [name, setName] = useState("");
-  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [enterprise_sector_id, setEnterprise_sector_id] = useState("");
+
 
   function handleSingUp() {
-    if(!name || !userName || !password || !enterprise_sector_id) {
+    if(!name || !email || !password ) {
       return toast.info("Algum campo não foi preenchido");
     }
 
-    api.post("/users", { name, userName, password, enterprise_sector_id})
+    api.post("/users", { name, email, password} )
     .then(() => {
       toast.success("Usuário cadastrado com sucesso");
     }) 
@@ -63,7 +62,7 @@ export function SignUp() {
           placeholder="Login"
           type="text"
           icon={FiUserCheck}
-          onChange={e => setUserName(e.target.value)}
+          onChange={e => setEmail(e.target.value)}
         />
 
         <Input
@@ -73,12 +72,7 @@ export function SignUp() {
           onChange={e => setPassword(e.target.value)}
         />
 
-        <Input
-          placeholder="Empresa"
-          type="enterprise_sector_id"
-          icon={BiBuildings}
-          onChange={e => setEnterprise_sector_id(e.target.value)}
-        />
+    
 
         <Button title="Cadastrar" onClick={handleSingUp}/>
         <Button title="Voltar" onClick={handleSignOut} />
