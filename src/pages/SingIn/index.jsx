@@ -32,7 +32,7 @@ export function SignIn() {
       <Wrapper>
         <Form>
           <LogoWrapper>
-            <h1>🌿 Bio Verde</h1>
+            <h1>🌿 Bio Ciclo</h1>
           </LogoWrapper>
 
           <Title>Bem-vindo de volta</Title>
