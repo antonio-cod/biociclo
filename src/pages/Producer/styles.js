@@ -42,10 +42,10 @@ export const Form = styled.form`
   }
 
   > button {
-    width: 210px;
+    width: 100%;
     padding-block: 10px;
     justify-items: center;
-    margin-left: 30px;
+   
   }
 
   
@@ -56,3 +56,32 @@ export const Background = styled.div`
   background: url(${backgroundImg}) no-repeat center center;
   background-color: ${({ theme }) => theme.COLORS.GRAY_50};
 `
+export const SelectWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+`;
+
+export const Select = styled.select`
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border-radius: 10px;
+  border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_50};
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  font-size: 1rem;
+  /* appearance: none; */
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme }) => theme.COLORS.ORANGE};
+  }
+`;
+
+export const IconWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: ${({ theme }) => theme.COLORS.RED_900};
+`;

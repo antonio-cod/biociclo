@@ -1,31 +1,36 @@
 import styled from "styled-components";
 
+
+
 export const Container = styled.nav`
   width: 100%;
+  
+  padding: 20px; /* centraliza horizontalmente + margem inferior */
 
-  display: flex;  
-  max-width: 632px;
-  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* distribui conteúdo dentro do container */
 
+  border-bottom: solid 2px #afacac;
   > h1 {
     flex: 1;
   }
 
   > button {
-        background-color: transparent;
-        border: none;
-    }
+    background-color: transparent;
+    border: none;
+  }
 
   > aside {
     display: flex;
     align-items: center;
 
     &::after {
-        content:""; 
-        height: 24px; 
-        width: 1px;
-        background-color: ${({ theme }) => theme.COLORS.GRAY_600};        
-        margin:0 16px;
+      content: "";
+      height: 24px;
+      width: 1px;
+      background-color: ${({ theme }) => theme.COLORS.GRAY_600};
+      margin: 0 16px;
     }
   }
 
@@ -33,6 +38,7 @@ export const Container = styled.nav`
     color: ${({ theme }) => theme.COLORS.GRAY_600};
   }
 `;
+
 
 export const User = styled.div`
     display: flex;

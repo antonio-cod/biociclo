@@ -20,7 +20,6 @@ export const Container = styled.div`
     width: 100%;
     width: 270px;
     padding: 12px;
-    color: ${({ theme }) => theme.COLORS.GREEN_300};
     background: transparent;
     border: 2px solid;
     border-radius: 10px;

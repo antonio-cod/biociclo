@@ -1,12 +1,29 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, #e0f2f1, #a5d6a7);
+   background: linear-gradient(135deg, #e0f2f1, #a5d6a7); 
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const Background = styled.div`
+  flex: 1;
+  /* background-color: ${({ theme }) => theme.COLORS.GRAY_100}; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+
+  }
+  
 `;
 
 export const Wrapper = styled.div`

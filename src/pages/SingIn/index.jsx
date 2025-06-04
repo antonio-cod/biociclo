@@ -4,6 +4,8 @@ import { FaRegUser } from 'react-icons/fa';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 
+import backgroundImg from '../../assets/backgroundImg.jpeg'
+
 import {
   Container,
   Form,
@@ -13,6 +15,7 @@ import {
   WithButton,
   Wrapper,
   Footer,
+  Background,
 } from './styles';
 
 import { useAuth } from '../../hooks/auth';
@@ -32,7 +35,9 @@ export function SignIn() {
       <Wrapper>
         <Form>
           <LogoWrapper>
-            <h1>🌿 Bio Ciclo</h1>
+          <Background>
+            <img src={backgroundImg} alt="Logo"  />
+          </Background>
           </LogoWrapper>
 
           <Title>Bem-vindo de volta</Title>

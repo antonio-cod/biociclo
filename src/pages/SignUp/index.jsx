@@ -8,17 +8,17 @@ import { Button } from '../../components/Button'
 import { Container, Form, Background } from './styles'
 import { useState } from 'react'
 
-import { useAuth }from "../../hooks/auth";
+
 import { api } from "../../services/api";
 import { toast } from 'react-toastify';
 
 export function SignUp() {
-  const { signOut } = useAuth();
+  
   const navigation = useNavigate();
 
   function handleSignOut() {
     navigation("/");
-    signOut();
+    
   }
 
   const [name, setName] = useState("");
@@ -59,7 +59,7 @@ export function SignUp() {
         />
 
         <Input
-          placeholder="Login"
+          placeholder="E-mail"
           type="text"
           icon={FiUserCheck}
           onChange={e => setEmail(e.target.value)}

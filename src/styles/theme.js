@@ -4,6 +4,8 @@ export default {
     GREEN_800: "#496940",
     GREEN_300: "#4aa93b",
     
+    // LINEAR_GRADIENT: "linear-gradient(135deg, #e0f2f1, #a5d6a7",
+
     ORANGE_500: "#fa8331",
 
     WHITE_900: "#ffffff",
@@ -12,10 +14,11 @@ export default {
 
     YELLO_900: "#f9ff00",
 
+    GRAY_50:  "#f7f7f7",
     GRAY_100: "#96958a",
     GRAY_500: "#cacacc",
     GRAY_900: "#000000",
-
+    
     BLUE_100: "#2912f1",
     BLUE_200: "#1f0dde",
     BLUE_300: "#1509cc",

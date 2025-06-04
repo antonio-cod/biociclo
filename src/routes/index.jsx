@@ -12,16 +12,16 @@ import { api } from '../services/api';
 export function Routes() {
   const { user, signOut } = useAuth();
 
-  // useEffect(() => {
-  //   api
-  //     .get('/users/validated')
-  //     .catch((error) => {
-  //       console.log(error);
-  //       if(error.response?.status === 401) {
-  //         signOut();
-  //       }
-  //     })
-  // }, []);
+  useEffect(() => {
+    api
+      .get('/users/validated')
+      .catch((error) => {
+        console.log(error);
+        if(error.response?.status === 401) {
+          signOut();
+        }
+      })
+  }, []);
 
   function AcessRoute() {
     switch(user.role){

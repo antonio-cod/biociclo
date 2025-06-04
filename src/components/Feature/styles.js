@@ -6,7 +6,7 @@ export const Container = styled(Link)`
   height: 200px;
 
   background-color: ${({ theme }) => theme.COLORS.GRAY_100};
-  color: ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({ theme }) => theme.COLORS.GRAY_500};
   border-radius: 7px;
   overflow: hidden;
   
